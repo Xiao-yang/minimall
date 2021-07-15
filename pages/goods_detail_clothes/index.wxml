@@ -1,0 +1,53 @@
+<!-- //轮播图部分 -->
+<view class="detail_swiper">
+  <swiper autoplay circular indicator-dots>
+    <swiper-item wx:for="{{message.pics}}" wx:key="pics_id">
+      <image mode="widthFix" src="{{item.pics_mid}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 商品价格部分 -->
+<view class="goods_price">
+  ￥{{message.goods_price}}
+</view>
+<!-- 商品名称 -->
+<view class="goods_name">
+   {{message.goods_name}}
+</view>
+<!-- 图文详情 -->
+<view class="goods_text">
+  <text>图文详情</text>
+</view>
+<!-- 图文区域 -->
+<view class="goods_image">
+    <image src="http://img10.360buyimg.com/imgzone/jfs/t1/132775/9/13138/526538/5f8f97e1Ebc3a4bc3/4c27c1a7411a8cfa.jpg"></image> 
+</view>
+<view class="goods_image2">
+  <image src="http://img10.360buyimg.com/imgzone/jfs/t1/123227/16/15756/437282/5f8f97e4E450569a2/429b56ab0c2a0e40.jpg"></image>
+</view>
+<view class="goods_image2">
+  <image src="http://img10.360buyimg.com/imgzone/jfs/t1/137815/38/11625/1006111/5f8f97eeE86a61bcc/b2b4b0b17a99a32e.jpg"></image>
+</view>
+<!-- 底部加入购物车按钮 -->
+<view class="btm_tool">
+  <view class="tool_item">
+    <view class="iconfont icon-fuwudingdanxiangqing-kefu"></view>
+    <view>客服</view>
+    <button open-type="contact"></button>
+  </view>
+  <view class="tool_item">
+    <view class="iconfont icon-fenxiang"></view>
+    <view>分享</view>
+    <button open-type="share"></button>
+  </view>
+  <navigator open-type="switchTab" url="/pages/cart/index" class="tool_item">
+    <view class="iconfont icon-cart"></view>
+    <view>购物车</view>
+  </navigator>
+  <view class="tool_item btn_cart " bindtap="handleCartAdd">
+  加入购物车
+  </view>
+  <view class="tool_item btn_buy">
+    立即购买
+  </view>
+</view>
